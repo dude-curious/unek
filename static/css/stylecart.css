@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+    font-family: 'DM Sans', sans-serif;
+}
+
+html{
+    margin: 5em 0;
+}
+
+/*<-- to remove arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {   
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*to remove arrows -->*/
+
+body{
+    background: rgb(185,147,214);
+    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+}
+
+.container{
+    background-color: white;
+    width: 50%;
+    margin: 5% 25%;
+    border-radius:25px;
+    padding: 1em 0;
+}
+
+h1{
+    text-align: center;
+    margin: .75em 0;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.profile{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em auto;
+
+}
+
+label{
+    margin: 1em;
+    /* font-weight: bold; */
+}
+
+#name,#number,#address{
+    border: 0;
+    border-bottom: 1px solid;
+    outline: 0;
+    margin: 0 .5em;
+    text-align: center;
+    
+}
+
+#addresslabel{
+    width: 80%;
+}
+
+#address{
+    overflow: scroll;
+    width: 75% ;
+}
+
+li{
+    width:100%;
+    margin: .5em 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+p{
+    text-align: center;
+    margin: 1em auto;
+    font-weight: bold;
+    background-color: blanchedalmond;
+    
+}
+
+span{
+    display:block;
+    width:30%;
+    float:left;
+    margin:.25em ;
+    /* font-weight: bold; */
+
+}
+
+
+
+#itemname{
+    margin-left:2em;
+}
+
+li:after{
+    content:"";
+    clear:both;
+    display:block
+}
+
+li:nth-child(3){
+    margin-bottom:2em;
+}
+
+#placeorderbtn{
+    background: rgb(185,147,214);
+    background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%);
+    padding: .5em;
+    border-radius: 4px;
+    margin: .5em auto;
+    color:white;
+    border: 0;
+    transition: width .4s ease-in;
+    width: 20%;
+    display: block;
+    /* font-weight: bold; */
+}
+
+#placeorderbtn:hover{
+    cursor: pointer;
+    width: 30%;
+}
+
+/* ----------Required icons------------ */
+.profile label img{
+    display: none;
+}
+
+/* ------------order placed div------------ */
+#orderplaced{
+    z-index: 3;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: white;
+    width: 40%;
+    height: 40%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow:5px 5px 500px 1px,-5px -5px 500px 1px;
+}
+#orderplaced h2{
+    text-align: center;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+#orderplaced::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*---------------------- Media---------------------- */
+@media screen and (max-width:1335px){
+    .container{
+        width:80%;
+        margin:0 10%;
+    }
+    #addresslabel{
+        width: 90%;
+    }
+    #address{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:660px){
+    .container{
+        width:96%;
+        margin:0 2%;
+    }
+
+    label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em;
+    }
+
+    #name,#number,#address{
+        margin: .75em 0;
+    }
+
+    span{
+        width:100%;
+        text-align:center;
+    }
+
+    #itemname{
+        margin:1em 0 0 0;
+    }
+    #placeorderbtn{
+        width:50%
+    }
+    #orderplaced h2{
+        font-size: 1em;
+    }
+    
+}

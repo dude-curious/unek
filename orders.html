@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <title>UNEK-Orders</title>
+    <link rel="stylesheet" href="/css/styleorders.css">
+    
+</head>
+<body>
+    <nav>
+        <h1>UNEK</h1>
+        <ul class="normal">
+            <li id="homebtn">Home</li>
+            <li id="ordersbtn"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p> </li>
+            <li id="social"> <div class="social">
+                <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+                <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+                <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+            </div></li>
+        </ul>
+        <img id="hamburgerbtn" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
+        
+
+    </nav>
+    <ul class="hamburger">
+        <li id="hamhomebtn">Home</li>
+        <li id="hamordersbtn"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/><p> Call us now <br> +91 9606618295</p> </li>
+        <li id="social"> <div class="social">
+            <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+            <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+            <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+        </div></li>
+    </ul>
+
+    <!-- ----------nav ends---------- -->
+    <div class="container">
+        
+        <h1>Orders</h1>
+        <form action="/cart" method="post" id="form">
+
+            
+            <div id="shirtnpantdiv" class="div">
+                <label for="shirtnpant">Shirt and Pant(With Iron) -- ₹35/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(0)">+</button> <input type="number" class="num" value="0" name="Shirt and Pant(With Iron)" id="shirtnpant" min="0" > <button class="minus" onclick="decrement(0)">- </button>
+                </div>
+                
+            </div>
+
+            <div id="shirtdiv" class="div">
+                <label for="shirt">Shirt(With Iron) -- ₹18/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(1)">+</button> <input type="number" class="num" value="0" name="Shirt(With Iron)" id="shirt" min="0" > <button class="minus" onclick="decrement(1)">- </button>
+                </div>
+                
+            </div>
+
+            <div id="pantdiv" class="div">
+                <label for="pant">Pant(With Iron) -- ₹18/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(2)">+</button> <input type="number" class="num" value="0" name="Pant(With Iron)" id="pant" min="0" > <button class="minus" onclick="decrement(2)">- </button>
+                </div>
+                
+            </div>   
+            
+            <div id="dresses" class="div">
+                <label for="dresses">Dresses -- ₹30/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(3)">+</button> <input type="number" class="num" value="0" name="Dresses" id="dresses" min="0"> <button class="minus" onclick="decrement(3)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="bedcoverSdiv" class="div">
+                <label for="bedcoverS">Bed Cover(Single) -- ₹25/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(4)">+</button> <input type="number" class="num" value="0" name="Bed Cover(Single)" id="bedcoverS" min="0"><button class="minus" onclick="decrement(4)" >- </button>
+                </div>
+                
+            </div>
+            
+            <div id="bedcoverDdiv" class="div">
+                <label for="bedcoverD" ">Bed Cover(Double) -- ₹45/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(5)">+</button> <input type="number" class="num" value="0" name="Bed Cover(Double)" id="bedcoverD" min="0"> <button class="minus" onclick="decrement(5)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="blanketsBdiv" class="div">
+                <label for="blanketB">Blankets(Big) -- ₹210/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(6)">+</button> <input type="number" class="num" value="0" name="Blankets(Big)" id="blanketB" min="0"> <button class="minus" onclick="decrement(6)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="blanketSdiv" class="div">
+                <label for="blanketS">Blankets(Small) -- ₹80/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(7)">+</button> <input type="number" class="num" value="0" name="Blankets(Small)" id="blanketS" min="0"> <button class="minus" onclick="decrement(7)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="pillowdiv" class="div">
+                <label for="pillow">Pillow -- ₹4/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(8)">+</button> <input type="number" class="num" value="0" name="Pillow" id="pillow" min="0"> <button class="minus" onclick="decrement(8)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="curtains" class="div">
+                <label for="curtains">Curtains(With Iron) -- ₹15/-</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(9)">+</button> <input type="number" class="num" value="0" name="Curtains" id="curtains" min="0"> <button class="minus" onclick="decrement(9)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="bigcarpetdiv" class="div">
+                <label for="bigcarpet">Big Carpet -- ₹8/- per Sqft</label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(10)">+</button> <input type="number" class="num" value="0" name="Big carpet" id="bigcarpet" min="0"> <button class="minus" onclick="decrement(10)">- </button>
+                </div>
+                
+            </div>
+            
+
+            <button id="submitbtn">Add to Cart</button>
+        </form>
+        
+    </div>
+    <footer>
+
+        <p id="firstc">Copyright © 2022. All Rights Reserved.</p>
+        <p id="secc">Email : unekcustomercare@gmail.com</p>
+        
+        <div class="social">
+            <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+            <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+            <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+        </div>
+    <script>
+        let homebtn=document.getElementById('homebtn')
+        let hamburgeropts=document.getElementsByClassName('hamburger')[0];
+        let hamburgerbtn=document.getElementById('hamburgerbtn');
+        let hamburgerhomebtn=document.getElementById('hamhomebtn');
+       let form=document.getElementById('form');
+       let plusBtn =document.getElementsByClassName('plus');
+       let minusBtn =document.getElementsByClassName('minus');
+       let inputValue=document.getElementsByClassName('num')
+       let addToCart=document.getElementById('submitbtn');
+       let icons=document.getElementsByClassName('icons');
+       var j=0;
+       form.addEventListener('submit',(e)=>{
+            e.preventDefault();    
+       })
+
+
+
+       addToCart.addEventListener('click',()=>{
+           let count=0;
+            for(let i=0;i<11;i++){
+                if(Number(inputValue[i].value)!=0){
+                    form.submit();
+                    break;        
+                }
+                count++;
+           }
+
+           if(count===11){
+               alert("There's nothing to add to cart");
+           }
+            
+            
+        });
+
+       function increment(i){
+          inputValue[i].value=Number(inputValue[i].value)+1;
+       }
+
+       function decrement(i){
+           if(Number(inputValue[i].value)>0)
+            inputValue[i].value=Number(inputValue[i].value)-1;
+       }
+
+       homebtn.addEventListener('click',()=>{
+            window.location.href='/';
+        })
+       hamburgerhomebtn.addEventListener('click',()=>{
+            window.location.href='/';
+        })
+
+        hamburgerbtn.addEventListener('click',()=>{
+            if(hamburgeropts.style.display=='none')
+                hamburgeropts.style.display='flex';
+            else
+                hamburgeropts.style.display='none';
+
+        })
+
+        icons[0].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[1].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[2].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+        icons[3].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[4].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[5].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+        icons[6].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[7].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[8].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+    </script>
+</body>
+</html>

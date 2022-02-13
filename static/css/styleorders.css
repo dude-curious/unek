@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Source Serif 4', sans-serif; */
+    font-family: 'DM Sans', sans-serif;
+    list-style-type: none;
+    
+}
+
+/* html{
+    margin: 5em 0;
+} */
+body {
+    background: rgb(185,147,214);
+    background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%);
+}
+
+/* ------------ nav----------- */
+nav{
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    margin:0 auto;
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    padding:1em;
+    /* border-bottom:1px solid #808080; */
+    box-shadow: 0 5px 100px 1px #000000;
+}
+
+nav h1{
+    width: 70%;
+    text-indent: -10000000px;
+    background: url('/img/logo.png') no-repeat ;
+    /* background-size: contain; */
+    background-size: 250px 250px;
+    background-position: 0 55%;
+}
+
+ul.normal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+ul.normal:nth-child(2):hover{
+    cursor: pointer;
+}
+
+nav img#phoneicon{
+    width: 3em;
+    height: 3em;
+    
+}
+
+/* ----------------Hamburger------------ */
+nav img#hamburgerbtn{
+    display: none;
+}
+
+
+ul.hamburger{
+    display: none;
+    width: 100%;
+}
+
+#hamordersbtn,#hamhomebtn{
+    border-bottom: 1px solid;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    
+}
+
+#ordersbtn,#hamordersbtn{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ordersbtn:hover,#hamordersbtn:hover{
+    cursor: pointer;
+}
+/* ---------nav ends----------- */
+h1{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+label{
+    display: block;
+    margin: 0.25em;
+    width: 60%;
+    font-weight: 500;
+    
+}
+input{
+    display: block;
+    margin: 0.25em;
+    border: 0;
+    border-bottom: 2px solid rgb(185,147,214);
+    outline: 0;
+    text-align: center;
+}
+
+
+
+
+.container{
+    width: 50%;
+    margin: 2.5em auto;
+    padding: 1em 0;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    background-color: white;
+}
+
+#form{
+    margin: 0 12%;
+}
+
+.div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+    margin: .75em 0;
+}
+
+
+#submitbtn{
+    background: rgb(185,147,214);
+    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    padding: .5em;
+    border-radius: 4px;
+    margin: .5em auto;
+    color:white;
+    border: 0;
+    transition: width .4s ease-in;
+    width: 20%;
+    display: block;
+}
+
+#submitbtn:hover{
+    cursor: pointer;
+    width: 30%;
+}
+
+.btns{
+    display: flex;
+    /* width: 35%; */
+}
+
+.plus,.minus{
+    border:0;
+    height:2.5em;
+    width:2.5em;
+    transition: transform .3s ease-in-out;
+    border-radius:50%;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    opacity:0.8;
+}
+
+.plus:hover,.minus:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*<-- to remove arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {   
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*to remove arrows -->*/
+.num{
+    margin: .5em;
+    width: 1.5em;
+    border: 0;
+    
+}
+
+.container h1{
+    text-align: center;
+    margin: 1em;
+}
+
+/* -------------footer--------------- */
+
+footer{
+    display: flex;
+    width: 100%;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #000000;
+    color: whitesmoke;
+    margin-top: 3em;
+}
+
+footer p, footer div{
+    margin: .25em;
+}
+
+ div.social img{
+     margin: .5em;
+    width: 1.5em;
+}
+
+
+@media screen and (max-width:1300px) {  
+    nav h1{
+        width: 50%;
+    }    
+
+    ul.original{
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .container{
+        width:60%;
+        margin:0 20%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        width:90%;
+        margin:0 5%;
+    }
+
+    #form{
+        margin:0 5%;
+    }
+}
+
+@media  screen and (max-width:770px) {
+    nav h1{
+        background-size: 150px 150px;
+        background-position: -10% 55%;
+    }
+    
+    nav ul.normal{
+        display: none;
+    }    
+     ul.hamburger{
+        display: none;
+        flex-direction: column;
+    }
+
+    ul.hamburger li{
+        text-align: center;
+        margin: 0em auto;
+        width: 90%;
+        background-color: white;
+        border: 1px solid;
+        width: 100%;
+    }
+
+    nav img#hamburgerbtn{
+        display: block;
+    }
+
+    /* -----------footer------------ */
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+        height: 100%;
+    }
+
+    footer #firstc,#secc,.social{
+        margin: .75em 0;
+    }
+}

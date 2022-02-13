@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNEK</title>
+    <link rel="stylesheet" href="/css/stylehome.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+<body>
+    <div class="container">    
+        <nav>
+            <h1>UNEK</h1>
+            <ul class="normal">
+                <li id="homebtn">Home</li>
+                <li id="ordersbtn"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p> </li>
+                <li id="social"> <div class="social">
+                    <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+                    <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+                    <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+                </div></li>
+            </ul>
+            <img id="hamburgerbtn" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
+            
+
+        </nav>
+        <ul class="hamburger">
+            <li id="hamhomebtn">Home</li>
+            <li id="hamordersbtn"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/><p> Call us now <br> +91 9606618295</p> </li>
+            <li id="social"> <div class="social">
+                <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+                <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+                <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+            </div></li>
+        </ul>
+        <div class="innercontainer">
+            <section id="sec1">
+                <div id="contents">
+                    <h1>WE OFFER THE BEST AND QUICK <br> LAUNDRY SERVICES WITH <br> AFFORDABLE PRICES  </h1>
+                    <button id="ordernowbtn">ORDER NOW</button>
+                </div>
+                <!-- <p>Now it's time to break this stereotype </p> -->
+            </section>
+
+            <section id="sec2">
+                <div class="box">
+                    <h1 class="count" data-target="110">0</h1>
+                    <p>Orders</p>
+                </div>
+                <div class="box">
+                    <h1 class="count" data-target="200">0</h1>
+                    <p>Clients</p>
+                </div>
+                <div class="box">
+                    <h1 class="count" data-target="60">0</h1>
+                    <p>Business Clients</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <div class="box">
+                    <h1>Laundry Services</h1>
+                    <p> Let us pick up your dirty laundry, sort it, stains, dry, fold and deliver back to you in one neat, easy package</p>
+                </div>
+                <div class="box">
+                    <h1>Dry Cleaning Services</h1>
+                    <p> SMU students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results</p>
+                </div>
+                <div class="box">
+                    <h1>Carpet Cleaning</h1>
+                    <p> To keep carpet at peak performance, we recommend professional deep cleaning your every 12 to 18 months</p>
+                </div>
+            </section>
+            <footer>
+
+                <p id="firstc">Copyright © 2022. All Rights Reserved.</p>
+                <p id="secc">Email : unekcustomercare@gmail.com</p>
+                
+                <div class="social">
+                    <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+                    <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+                    <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // let ordersbtn = document.getElementById("ordersbtn");
+        let homebtn=document.getElementById('homebtn');
+        let hamburgerbtn=document.getElementById('hamburgerbtn');
+        let hamburgeropts=document.getElementsByClassName('hamburger')[0];
+        let hamburgerhomebtn=document.getElementById('hamhomebtn');
+        let ordernowbtn=document.getElementById('ordernowbtn');
+        let icons=document.getElementsByClassName('icons');
+        
+        ordernowbtn.addEventListener('click',()=>{
+            window.location.href='/orders';
+        })
+
+        homebtn.addEventListener('click',()=>{
+            window.location.reload();
+        })
+
+        
+
+        hamburgerhomebtn.addEventListener('click',()=>{
+            window.location.reload();
+        })
+
+        hamburgerbtn.addEventListener('click',()=>{
+            if(hamburgeropts.style.display=='none')
+                hamburgeropts.style.display='flex';
+            else
+                hamburgeropts.style.display='none';
+
+        })
+        icons[0].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[1].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[2].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+        icons[3].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[4].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[5].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+        icons[6].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[7].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[8].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+
+        
+        // --------------counting----------------
+        document.addEventListener('scroll',counterfun);
+        function counterfun(){
+            const counters = document.querySelectorAll('.count');
+            const speed = 50;
+       
+            counters.forEach((counter) => {
+            const updateCount = () => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const count = parseInt(counter.innerText);
+            const increment = Math.trunc(target / speed);
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 800);
+            } 
+            else {
+                counter.innerText = target;
+            }
+
+            };
+                updateCount();
+                });
+        }
+        
+    </script>
+</body>
+</html>

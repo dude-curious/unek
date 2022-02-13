@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    
+    <link rel="stylesheet" href="/css/stylecart.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+<body>
+    <div class="container">
+        <h1>Cart</h1>
+            <div class="profile">
+                <label for="name">
+                    Name : <input type="text" name="name" id="name" placeholder="Enter your name" required><img class="requiredIcon" src="https://img.icons8.com/windows/32/000000/mandatory.png"/>
+                </label>
+    
+
+        
+                <label for="number">
+                    Mobile Number : <input type="number" name="number" id="number" maxlength="10" minlength="10" placeholder="Enter your number" required><img class="requiredIcon" src="https://img.icons8.com/windows/32/000000/mandatory.png"/>
+                </label> 
+        
+            
+                <label for="address" id="addresslabel">
+                Address : <input type="text" name="address" id="address" placeholder="Enter your address" required> <img class="requiredIcon" src="https://img.icons8.com/windows/32/000000/mandatory.png"/> 
+                </label> 
+            </div>
+            <ul>
+            <%  var fprice=0;
+                var tquan=0;
+                for(let i=0;i<11;i++){ 
+                if(Number(data[i][1])!=0 ){
+                    tquan=tquan+Number(data[i][1]);
+                    let tprice=data[i][2]*Number(data[i][1]);
+                    fprice=fprice+tprice; 
+            %> 
+            <li><span id="itemname"><%= data[i][0] %></span> <span id="quantity">Quantity : <%=data[i][1]%></span>   <span id="price">Price = ₹<%=tprice%>  </span> </li>
+            <% } %>
+            <% } %>  
+            
+        </ul>
+        <p>  Total Amount Payable = ₹<%=fprice %></p>
+        <input type="submit" value="Place order" id="placeorderbtn">
+
+    
+    </div>
+
+    <!-- --------------order-placed div----------------- -->
+    
+    <div id="orderplaced">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_zweerbdg.json"  background="transparent"  speed="1"  style="width: 9em; height: 9em;"  loop autoplay></lottie-player>
+        <h2 >Thank you 😍<br>See you again...😊</h2>
+    </div>
+    
+    
+    <script type="text/javascript">
+        let placeorderbtn=document.getElementById('placeorderbtn');
+        let name=document.getElementById('name')
+        let number=document.getElementById('number')
+        let address=document.getElementById('address')
+        let orderplaceddiv=document.getElementById('orderplaced')
+        let requiredIcon=document.getElementsByClassName('requiredIcon');
+        placeorderbtn.addEventListener('click',async ()=>{
+            let count=0;
+
+            if(name.value.length!=0){
+                count++;
+                requiredIcon[0].style.display='none';
+            }
+            else{
+                alert("Name is required");
+                requiredIcon[0].style.display='inline';
+            }
+            if(number.value.length===10){
+                count++;
+                requiredIcon[1].style.display='none';
+            }
+            else{
+                alert("Invalid Mobile Number");
+                requiredIcon[1].style.display='inline';
+            }
+            if(address.value.length!=0){
+                count++;
+                requiredIcon[2].style.display='none';
+            }
+            else{
+                alert('Address is required');
+                requiredIcon[2].style.display='inline';
+            }
+            if(count===3){
+                orderplaceddiv.style.display='flex';
+
+                setTimeout(()=>window.location.href="/orders",3000);
+                
+                
+                res=await fetch('/order-placed',{
+                    method:'POST',
+                    headers:{'Content-type':'application/json'},
+                    body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>})
+                }).then((Response)=>console.log(Response))
+                
+                
+                
+            }
+        })
+    </script>
+</body>
+</html>

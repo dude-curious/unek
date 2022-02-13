@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+/* font-family: 'DM Sans', sans-serif; */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container{
+    margin:0 auto;
+    width:100%;
+    background-color: white;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    margin:0 auto;
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    padding:1em;
+    /* border-bottom:1px solid #808080; */
+    box-shadow: 0 5px 100px 1px #000000;
+}
+
+nav h1{
+    width: 60%;
+    text-indent: -10000000px;
+    background: url('/img/logo.png') no-repeat ;
+    /* background-size: contain; */
+    background-size: 250px 250px;
+    background-position: 0 55%;
+}
+
+ul.normal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+
+ul.normal:nth-child(2):hover{
+    cursor: pointer;
+}
+
+nav img#phoneicon{
+    width: 3em;
+    height: 3em;
+    
+}
+
+/* ----------------Hamburger------------ */
+nav img#hamburgerbtn{
+    display: none;
+}
+
+
+ul.hamburger{
+    display: none;
+    width: 100%;
+}
+
+#hamordersbtn,#hamhomebtn{
+    border-bottom: 1px solid;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#ordersbtn,#hamordersbtn{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ordersbtn:hover,#hamordersbtn:hover{
+    cursor: pointer;
+}
+/* -------------section 1 starts ------------- */
+section#sec1{
+    width: 100%;
+    height:70vh;
+    background: linear-gradient(90deg,rgba(140,166,219,0) 0%,  rgba(185,147,214,0.8) 79%),url('/img/oldmancom.jpeg') no-repeat ;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+section#sec1 div#contents{
+    width: 40%;
+}
+
+section#sec1 h1{
+    margin: 5% 2% 5% 5%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+section#sec1 #ordernowbtn{
+    display: block;
+    margin: 0 auto 0 5%;
+    border: 0;
+    padding: 1em;
+    border-radius: 5px;
+    background:linear-gradient(90deg, rgba(185,147,214,1) 20%, rgba(140,166,219,1) 100%);
+    color: white;
+    box-shadow: 5px 5px 100px 3px ,-5px -5px 100px 3px ;
+    transition: transform .3s ease-in;
+    outline: 0;
+}
+
+section#sec1 #ordernowbtn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* -------------section 2 starts------------ */
+
+section#sec2{
+    width: 100%;
+    margin: 4em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#sec2 div.box{
+    height: 95%;
+    width: 30%;
+    margin: 2em;
+    
+
+}
+
+#sec2 div.box h1{
+    text-align: center;
+    font-size: 5em;
+}
+
+#sec2 div.box p{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/* ----------------section 3 starts------------ */
+
+section#sec3{
+    width: 100%;
+    height: 80vh;
+    background:linear-gradient(90deg,rgba(0, 0, 0, 0.5) 0%,  rgba(0, 0, 0, 0.8) 79%), url('/img/motherdaughter.jpg') no-repeat;
+    background-size: cover;
+    margin: 4em 0;
+    margin-bottom: 0 !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#sec3 div.box{
+    height: 95%;
+    width: 30%;
+    margin: 1em auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sec3 div.box h1{
+    text-align: center;
+    font-size: 2em;
+    margin: .5em;
+    
+}
+
+#sec3 div.box p{
+    text-align: center;
+    font-size: 1em;
+}
+
+/* -------------footer--------------- */
+
+footer{
+    
+    display: flex;
+    width: 100%;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #000000;
+    color: whitesmoke;
+}
+
+footer p, footer div{
+    margin: .25em;
+}
+
+ div.social img{
+    width: 2em;
+}
+
+.icons{
+    cursor: pointer;
+    margin: .5em;
+}
+
+@media  screen and (max-width:770px) {
+    nav h1{
+        background-size: 150px 150px;
+        background-position: -10% 55%;
+    }
+    
+    nav ul.normal{
+        display: none;
+    }    
+     ul.hamburger{
+        display: none;
+        flex-direction: column;
+        transition: display 2s;
+    }
+
+    ul.hamburger li{
+        text-align: center;
+        margin: .25em;
+        width: 90%;
+    }
+
+    nav img#hamburgerbtn{
+        display: block;
+    }
+
+    /* ------------section 1 -------------- */
+    section#sec1 h1{
+        font-size: 1.25em;
+    }
+    /* -----------section 1-------------- */
+    section#sec2{
+        flex-direction: column;
+    }
+    section#sec2 div.box{
+        width: 100%;
+        margin: 2em auto;
+    }
+
+    /* -------section 3----- */
+    section#sec3 {
+        flex-direction: column;
+        background-position: center;
+    }
+    section#sec3 div.box{
+        width: 60%;
+        height: 30%;
+        margin: .5em auto;
+    }
+
+    /* -----------footer------------ */
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+        height: 100%;
+    }
+
+    footer #firstc,#secc,.social{
+        margin: .75em 0;
+    }
+}
