@@ -45,7 +45,10 @@ ul.normal{
     align-items: center;
     width: 40%;
 }
-
+ul.normal a{
+    color: black;
+    display: flex;
+}
 ul.normal:nth-child(2):hover{
     cursor: pointer;
 }
@@ -67,9 +70,15 @@ ul.hamburger{
     width: 100%;
 }
 
+ul.hamburger a{
+    color: black;
+    display: flex;
+}
+
 #hamordersbtn,#hamhomebtn{
     border-bottom: 1px solid;
     margin: 0 auto;
+    padding:.75em 0;
     width: 100%;
 }
 

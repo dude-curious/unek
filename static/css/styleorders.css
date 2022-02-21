@@ -52,6 +52,11 @@ ul.normal{
     width: 30%;
 }
 
+ul.normal a{
+    color: black;
+    display: flex;
+}
+
 ul.normal:nth-child(2):hover{
     cursor: pointer;
 }
@@ -73,9 +78,15 @@ ul.hamburger{
     width: 100%;
 }
 
+ul.hamburger a{
+    color: black;
+    display: flex;
+}
+
 #hamordersbtn,#hamhomebtn{
     border-bottom: 1px solid;
     margin: 0 auto;
+    padding:.75em 0;
     width: 100%;
     background-color: white;
     
@@ -112,7 +123,13 @@ input{
     text-align: center;
 }
 
-
+span.strikethrough{
+    text-decoration: line-through;
+    color: gray;
+}
+span.actualprice{
+    font-weight: bold;
+}
 
 
 .container{
@@ -157,6 +174,8 @@ input{
 .btns{
     display: flex;
     /* width: 35%; */
+    align-items: center;
+    justify-content: center;
 }
 
 .plus,.minus{
@@ -238,6 +257,15 @@ footer p, footer div{
         width:60%;
         margin:0 20%;
     }
+    nav h1{
+        width: 40%;
+    }
+    ul.normal{
+        width: 60% !important;
+    }
+    #submitbtn{
+        width: 40%;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -248,6 +276,9 @@ footer p, footer div{
 
     #form{
         margin:0 5%;
+    }
+    #submitbtn{
+        width: 90%;
     }
 }
 

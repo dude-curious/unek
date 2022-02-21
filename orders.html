@@ -17,7 +17,7 @@
         <h1>UNEK</h1>
         <ul class="normal">
             <li id="homebtn">Home</li>
-            <li id="ordersbtn"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p> </li>
+            <li id="ordersbtn"> <a href="tel:+919606618295"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p></a> </li>
             <li id="social"> <div class="social">
                 <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
                 <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
@@ -28,7 +28,7 @@
         
         <ul class="hamburger">
             <li id="hamhomebtn">Home</li>
-            <li id="hamordersbtn"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/><p> Call us now <br> +91 9606618295</p> </li>
+            <li id="hamordersbtn"><a href="tel:+919606618295"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p></a>  </li>
             <li id="social"> <div class="social">
                 <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
                 <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
@@ -46,7 +46,7 @@
 
             
             <div id="shirtnpantdiv" class="div">
-                <label for="shirtnpant">Shirt and Pant(With Iron) -- ₹35/-</label>
+                <label for="shirtnpant">Shirt and Pant(With Iron)  <span class="strikethrough">₹40</span> <span class="actualprice">₹35/-</span> </label>
                 <div class="btns">
                     <button class="plus" onclick="increment(0)">+</button> <input type="number" class="num" value="0" name="Shirt and Pant(With Iron)" id="shirtnpant" min="0" > <button class="minus" onclick="decrement(0)">- </button>
                 </div>
@@ -54,7 +54,7 @@
             </div>
 
             <div id="shirtdiv" class="div">
-                <label for="shirt">Shirt(With Iron) -- ₹20/-</label>
+                <label for="shirt">Shirt(With Iron) <span class="strikethrough">₹25</span> <span class="actualprice">₹20/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(1)">+</button> <input type="number" class="num" value="0" name="Shirt(With Iron)" id="shirt" min="0" > <button class="minus" onclick="decrement(1)">- </button>
                 </div>
@@ -62,7 +62,7 @@
             </div>
 
             <div id="pantdiv" class="div">
-                <label for="pant">Pant(With Iron) -- ₹20/-</label>
+                <label for="pant">Pant(With Iron) <span class="strikethrough">₹25</span> <span class="actualprice">₹20/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(2)">+</button> <input type="number" class="num" value="0" name="Pant(With Iron)" id="pant" min="0" > <button class="minus" onclick="decrement(2)">- </button>
                 </div>
@@ -70,7 +70,7 @@
             </div>   
             
             <div id="dresses" class="div">
-                <label for="dresses">Dresses -- ₹30/-</label>
+                <label for="dresses">Dresses <span class="strikethrough">₹40</span> <span class="actualprice">₹30/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(3)">+</button> <input type="number" class="num" value="0" name="Dresses" id="dresses" min="0"> <button class="minus" onclick="decrement(3)">- </button>
                 </div>
@@ -78,7 +78,7 @@
             </div>
             
             <div id="bedcoverSdiv" class="div">
-                <label for="bedcoverS">Bed Cover(Single) -- ₹15/-</label>
+                <label for="bedcoverS">Bed Cover(Single) <span class="strikethrough">₹20</span> <span class="actualprice">₹15/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(4)">+</button> <input type="number" class="num" value="0" name="Bed Cover(Single)" id="bedcoverS" min="0"><button class="minus" onclick="decrement(4)" >- </button>
                 </div>
@@ -86,7 +86,7 @@
             </div>
             
             <div id="bedcoverDdiv" class="div">
-                <label for="bedcoverD" ">Bed Cover(Double) -- ₹25/-</label>
+                <label for="bedcoverD" ">Bed Cover(Double) <span class="strikethrough">₹30</span> <span class="actualprice">₹25/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(5)">+</button> <input type="number" class="num" value="0" name="Bed Cover(Double)" id="bedcoverD" min="0"> <button class="minus" onclick="decrement(5)">- </button>
                 </div>
@@ -94,7 +94,7 @@
             </div>
             
             <div id="blanketsBdiv" class="div">
-                <label for="blanketB">Blankets(Big) -- ₹210/-</label>
+                <label for="blanketB">Blankets(Big) <span class="strikethrough">₹250</span> <span class="actualprice">₹210/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(6)">+</button> <input type="number" class="num" value="0" name="Blankets(Big)" id="blanketB" min="0"> <button class="minus" onclick="decrement(6)">- </button>
                 </div>
@@ -102,7 +102,7 @@
             </div>
             
             <div id="blanketSdiv" class="div">
-                <label for="blanketS">Blankets(Small) -- ₹100/-</label>
+                <label for="blanketS">Blankets(Small) <span class="strikethrough">₹120</span> <span class="actualprice">₹100/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(7)">+</button> <input type="number" class="num" value="0" name="Blankets(Small)" id="blanketS" min="0"> <button class="minus" onclick="decrement(7)">- </button>
                 </div>
@@ -110,7 +110,7 @@
             </div>
             
             <div id="pillowdiv" class="div">
-                <label for="pillow">Pillow -- ₹5/-</label>
+                <label for="pillow">Pillow <span class="strikethrough">₹9</span> <span class="actualprice">₹5/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(8)">+</button> <input type="number" class="num" value="0" name="Pillow" id="pillow" min="0"> <button class="minus" onclick="decrement(8)">- </button>
                 </div>
@@ -118,7 +118,7 @@
             </div>
             
             <div id="curtains" class="div">
-                <label for="curtains">Curtains(With Iron) -- ₹15/-</label>
+                <label for="curtains">Curtains(With Iron) <span class="strikethrough">₹19</span> <span class="actualprice">₹15/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(9)">+</button> <input type="number" class="num" value="0" name="Curtains" id="curtains" min="0"> <button class="minus" onclick="decrement(9)">- </button>
                 </div>
@@ -126,7 +126,7 @@
             </div>
             
             <div id="bigcarpetdiv" class="div">
-                <label for="bigcarpet">Big Carpet -- ₹8/- per Sqft</label>
+                <label for="bigcarpet">Big Carpet--<span class="actualprice">₹8/-</span> per Sqft</label>
                 <div class="btns">
                     <button class="plus" onclick="increment(10)">+</button> <input type="number" class="num" value="0" name="Big carpet" id="bigcarpet" min="0"> <button class="minus" onclick="decrement(10)">- </button>
                 </div>
