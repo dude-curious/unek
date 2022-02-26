@@ -90,5 +90,5 @@ let transporter = nodemailer.createTransport({
 
 
 app.listen(port,()=>{
-    console.log('server up');
+    console.log('server up at '+port);
 })

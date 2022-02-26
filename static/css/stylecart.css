@@ -156,6 +156,7 @@ li:after{
 #orderplaced h2{
     text-align: center;
     font-family: 'Poppins', sans-serif !important;
+    
 }
 
 #orderplaced::after{
@@ -209,6 +210,14 @@ li:after{
     }
     #orderplaced h2{
         font-size: 1em;
+        
+    }
+
+    #orderplaced{
+        height: 30%;
+        width: 60%;
+        top: 30%;
+        left: 20%;
     }
     
 }
