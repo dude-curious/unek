@@ -217,15 +217,17 @@
 
        addToCart.addEventListener('click',()=>{
            let count=0;
-            for(let i=0;i<16;i++){
+           let submitted=0;
+            for(let i=0;i<17;i++){
                 if(Number(inputValue[i].value)!=0){
                     form.submit();
+                    submitted=1;
                     break;        
                 }
                 count++;
            }
 
-           if(count===16){
+           if(count===17 && submitted===0){
                alert("There's nothing to add to cart");
            }
             
