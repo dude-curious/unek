@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <title>UNEK-Orders</title>
+    <link rel="stylesheet" href="/css/styleplace.css">
+    
+</head>
+<body>
+    <nav>
+        <h1>UNEK</h1>
+        <ul class="normal">
+            <li id="homebtn">Home</li>
+            <li id="ordersbtn"> <a href="tel:+919606618295"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p></a> </li>
+            <li id="social"> <div class="social">
+                <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+                <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+                <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+            </div></li>
+        </ul>
+        <img id="hamburgerbtn" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
+        
+        <ul class="hamburger">
+            <li id="hamhomebtn">Home</li>
+            <li id="hamordersbtn"><a href="tel:+919606618295"><img id="phoneicon" src="https://img.icons8.com/nolan/64/apple-phone.png"/> <p> Call us now <br> +91 9606618295</p></a>  </li>
+            <li id="social"> <div class="social">
+                <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+                <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+                <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+            </div></li>
+        </ul>
+    </nav>
+    
+
+    <!-- ----------nav ends---------- -->
+    <div class="container">
+        
+        <h1>Select your city</h1>
+        
+        <div id="main">
+            <div id="district">
+                <h3> <a href="/orders-shimoga">Shivamogga</a> </h3>
+                <h3 id="bangalore">Bangalore</h3>
+            </div>
+            <div id="areas">
+                <h4> <a href="/orders-bangalore/hostel">PG/Hostel</a> </h4>
+                <h4><a href="/orders-bangalore/home">Home</a></h4>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+
+        <p id="firstc">Copyright © 2022. All Rights Reserved.</p>
+        <p id="secc">Email : unekcustomercare@gmail.com</p>
+        
+        <div class="social">
+            <img class="icons" src="/img/instaicon.png" alt="Instagram"/>
+            <img class="icons" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+            <img class="icons" src="https://img.icons8.com/color/96/000000/twitter--v1.png"/>
+        </div>
+    <script>
+        let homebtn=document.getElementById('homebtn')
+        let hamburgeropts=document.getElementsByClassName('hamburger')[0];
+        let hamburgerbtn=document.getElementById('hamburgerbtn');
+        let hamburgerhomebtn=document.getElementById('hamhomebtn');
+        let icons=document.getElementsByClassName('icons');
+       let form=document.getElementById('form');
+       
+       
+
+
+
+       
+       homebtn.addEventListener('click',()=>{
+            window.location.href='/';
+        })
+       hamburgerhomebtn.addEventListener('click',()=>{
+            window.location.href='/';
+        })
+
+        hamburgerbtn.addEventListener('click',()=>{
+            if(hamburgeropts.style.display=='none')
+                hamburgeropts.style.display='flex';
+            else
+                hamburgeropts.style.display='none';
+
+        })
+
+        icons[0].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[1].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[2].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+        icons[3].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[4].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[5].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+        icons[6].addEventListener('click',()=>{
+            window.open('https://instagram.com/unek_per?utm_medium=copy_link','_blank')
+        })
+        icons[7].addEventListener('click',()=>{
+            window.open('https://www.facebook.com/UNEK-106876295245848/','_blank')
+        })
+        icons[8].addEventListener('click',()=>{
+            window.open('https://twitter.com/unek_per?s=11','_blank')
+        })
+
+        let bangaloreBtn=document.getElementById('bangalore');
+        let areas=document.getElementById('areas');
+        bangaloreBtn.addEventListener('click',()=>{
+
+            
+            if(areas.style.display=='none')
+                areas.style.display='flex';
+            else
+                areas.style.display='none';
+
+        })
+
+    </script>
+</body>
+</html>

@@ -13,11 +13,13 @@
 }
 
 /* html{
-    margin: 5em 0;
+    height: 100%;
 } */
 body {
     background: rgb(185,147,214);
     background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%);
+    position: relative;
+    height: 100vh;
 }
 
 /* ------------ nav----------- */
@@ -109,30 +111,6 @@ h1{
 }
 
 
-label{
-    display: block;
-    margin: 0.25em;
-    width: 60%;
-    font-weight: 500;
-    
-}
-input{
-    display: block;
-    margin: 0.25em;
-    border: 0;
-    border-bottom: 2px solid rgb(185,147,214);
-    outline: 0;
-    text-align: center;
-}
-
-span.strikethrough{
-    text-decoration: line-through;
-    color: gray;
-}
-span.actualprice{
-    font-weight: bold;
-}
-
 
 .container{
     width: 50%;
@@ -143,81 +121,67 @@ span.actualprice{
     background-color: white;
 }
 
-#form{
-    margin: 0 12%;
-}
-
-.div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;  
-    margin: .75em 0;
-}
-
-
-#submitbtn{
-    background: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
-    padding: .5em;
-    border-radius: 4px;
-    margin: .5em auto;
-    color:white;
-    border: 0;
-    transition: width .4s ease-in;
-    width: 20%;
-    display: block;
-}
-
-#submitbtn:hover{
-    cursor: pointer;
-    width: 30%;
-}
-
-.btns{
-    display: flex;
-    /* width: 35%; */
-    align-items: center;
-    justify-content: center;
-}
-
-.plus,.minus{
-    border:0;
-    height:2.5em;
-    width:2.5em;
-    transition: transform .3s ease-in-out;
-    border-radius:50%;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
-    opacity:0.8;
-}
-
-.plus:hover,.minus:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-/*<-- to remove arrows */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {   
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-/*to remove arrows -->*/
-.num{
-    margin: .5em;
-    width: 1.5em;
-    border: 0;
-    
-}
-
 .container h1{
     text-align: center;
     margin: 1em;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+div#main{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+div#main h3{
+    background-color: rgb(185,147,214);
+    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    padding: 1em;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    text-align: center;
+    margin: .5em 0;
+}
+
+div#main h4{
+    background-color: #dedede;
+    padding: .75em;
+    border-radius: 10px;
+    color: black;
+    font-weight: 100;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    text-align: center;
+    margin: .5em 0;   
+}
+
+div#areas h4 a{
+    color: black !important;
+    
+}
+
+div#main h3:hover, div#main h4:hover{
+    transform: scale(1.1);
+}
+
+div#district{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em 0;
+}
+
+div#areas{
+    margin: 1em 0;
+    justify-content: space-evenly;
+    display: none;
 }
 
 /* -------------footer--------------- */
@@ -228,6 +192,8 @@ footer{
     padding: 0 1em;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    bottom: 0;
     margin: 0 auto;
     background-color: #000000;
     color: whitesmoke;
@@ -265,9 +231,7 @@ footer p, footer div{
     ul.normal{
         width: 60% !important;
     }
-    #submitbtn{
-        width: 40%;
-    }
+
 }
 
 @media screen and (max-width:768px){
@@ -276,12 +240,16 @@ footer p, footer div{
         margin:0 5%;
     }
 
-    #form{
-        margin:0 5%;
+    div#district{
+        flex-direction: column;
     }
-    #submitbtn{
-        width: 90%;
+
+    div#areas{
+        flex-direction: column;
+        width: 60%;
+    margin: .5em auto;
     }
+    
 }
 
 @media  screen and (max-width:770px) {
@@ -317,7 +285,7 @@ footer p, footer div{
         flex-direction: column;
         align-items: center;
         padding: 1em 0;
-        height: 100%;
+        
     }
 
     footer #firstc,#secc,.social{

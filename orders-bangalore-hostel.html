@@ -42,11 +42,10 @@
     <div class="container">
         
         <h1>Orders</h1>
-        <form action="/cart" method="post" id="form">
-
-            
+        <h1>PG/HOSTEL/ROOM</h1>
+        <form action="/cart-bangalore/hostel" method="post" id="form">
             <div id="shirtnpantdiv" class="div">
-                <label for="shirtnpant">Shirt and Pant(With Iron)  <span class="strikethrough">₹40</span> <span class="actualprice">₹35/-</span> </label>
+                <label for="shirtnpant">Shirt and Pant(With Iron)  <span class="strikethrough">₹45</span> <span class="actualprice">₹40/-</span> </label>
                 <div class="btns">
                     <button class="plus" onclick="increment(0)">+</button> <input type="number" class="num" value="0" name="Shirt and Pant(With Iron)" id="shirtnpant" min="0" > <button class="minus" onclick="decrement(0)">- </button>
                 </div>
@@ -54,23 +53,23 @@
             </div>
 
             <div id="shirtdiv" class="div">
-                <label for="shirt">Shirt(With Iron) <span class="strikethrough">₹25</span> <span class="actualprice">₹20/-</span></label>
+                <label for="shirt">Shirt and pant(Without Iron) <span class="strikethrough">₹30</span> <span class="actualprice">₹25/-</span></label>
                 <div class="btns">
-                    <button class="plus" onclick="increment(1)">+</button> <input type="number" class="num" value="0" name="Shirt(With Iron)" id="shirt" min="0" > <button class="minus" onclick="decrement(1)">- </button>
+                    <button class="plus" onclick="increment(1)">+</button> <input type="number" class="num" value="0" name="Shirt and pant(Without Iron)" id="shirt" min="0" > <button class="minus" onclick="decrement(1)">- </button>
                 </div>
                 
             </div>
 
             <div id="pantdiv" class="div">
-                <label for="pant">Pant(With Iron) <span class="strikethrough">₹25</span> <span class="actualprice">₹20/-</span></label>
+                <label for="pant">Shirt and Pant(only Iron) <span class="strikethrough">₹30</span> <span class="actualprice">₹25/-</span></label>
                 <div class="btns">
-                    <button class="plus" onclick="increment(2)">+</button> <input type="number" class="num" value="0" name="Pant(With Iron)" id="pant" min="0" > <button class="minus" onclick="decrement(2)">- </button>
+                    <button class="plus" onclick="increment(2)">+</button> <input type="number" class="num" value="0" name="Shirt and Pant(only Iron)" id="pant" min="0" > <button class="minus" onclick="decrement(2)">- </button>
                 </div>
                 
             </div>   
             
             <div id="dresses" class="div">
-                <label for="dresses">Dresses <span class="strikethrough">₹40</span> <span class="actualprice">₹30/-</span></label>
+                <label for="dresses">Dresses <span class="strikethrough">₹50</span> <span class="actualprice">₹40/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(3)">+</button> <input type="number" class="num" value="0" name="Dresses" id="dresses" min="0"> <button class="minus" onclick="decrement(3)">- </button>
                 </div>
@@ -78,7 +77,7 @@
             </div>
             
             <div id="bedcoverSdiv" class="div">
-                <label for="bedcoverS">Bed Cover(Single) <span class="strikethrough">₹20</span> <span class="actualprice">₹15/-</span></label>
+                <label for="bedcoverS">Bed Cover(Single) <span class="strikethrough">₹30</span> <span class="actualprice">₹25/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(4)">+</button> <input type="number" class="num" value="0" name="Bed Cover(Single)" id="bedcoverS" min="0"><button class="minus" onclick="decrement(4)" >- </button>
                 </div>
@@ -86,7 +85,7 @@
             </div>
             
             <div id="bedcoverDdiv" class="div">
-                <label for="bedcoverD" ">Bed Cover(Double) <span class="strikethrough">₹30</span> <span class="actualprice">₹25/-</span></label>
+                <label for="bedcoverD" ">Bed Cover(Double) <span class="strikethrough">₹60</span> <span class="actualprice">₹50/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(5)">+</button> <input type="number" class="num" value="0" name="Bed Cover(Double)" id="bedcoverD" min="0"> <button class="minus" onclick="decrement(5)">- </button>
                 </div>
@@ -94,7 +93,7 @@
             </div>
             
             <div id="blanketsBdiv" class="div">
-                <label for="blanketB">Blankets(Big) <span class="strikethrough">₹250</span> <span class="actualprice">₹210/-</span></label>
+                <label for="blanketB">Blankets(Big) <span class="strikethrough">₹399</span> <span class="actualprice">₹350/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(6)">+</button> <input type="number" class="num" value="0" name="Blankets(Big)" id="blanketB" min="0"> <button class="minus" onclick="decrement(6)">- </button>
                 </div>
@@ -102,7 +101,7 @@
             </div>
             
             <div id="blanketSdiv" class="div">
-                <label for="blanketS">Blankets(Small) <span class="strikethrough">₹120</span> <span class="actualprice">₹100/-</span></label>
+                <label for="blanketS">Blankets(Small) <span class="strikethrough">₹289</span> <span class="actualprice">₹250/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(7)">+</button> <input type="number" class="num" value="0" name="Blankets(Small)" id="blanketS" min="0"> <button class="minus" onclick="decrement(7)">- </button>
                 </div>
@@ -110,28 +109,78 @@
             </div>
             
             <div id="pillowdiv" class="div">
-                <label for="pillow">Pillow <span class="strikethrough">₹9</span> <span class="actualprice">₹5/-</span></label>
+                <label for="pillow">Pillow Cover <span class="strikethrough">₹9</span> <span class="actualprice">₹6/-</span></label>
                 <div class="btns">
                     <button class="plus" onclick="increment(8)">+</button> <input type="number" class="num" value="0" name="Pillow" id="pillow" min="0"> <button class="minus" onclick="decrement(8)">- </button>
                 </div>
                 
             </div>
             
-            <div id="curtains" class="div">
-                <label for="curtains">Curtains(With Iron) <span class="strikethrough">₹19</span> <span class="actualprice">₹15/-</span></label>
+            <div id="curtainsSdiv" class="div">
+                <label for="curtainsS">Curtains(Small)(With Iron) <span class="strikethrough">₹19</span> <span class="actualprice">₹15/-</span></label>
                 <div class="btns">
-                    <button class="plus" onclick="increment(9)">+</button> <input type="number" class="num" value="0" name="Curtains" id="curtains" min="0"> <button class="minus" onclick="decrement(9)">- </button>
+                    <button class="plus" onclick="increment(9)">+</button> <input type="number" class="num" value="0" name="Curtains(Small)" id="curtainsS" min="0"> <button class="minus" onclick="decrement(9)">- </button>
                 </div>
                 
             </div>
             
-            <div id="bigcarpetdiv" class="div">
-                <label for="bigcarpet">Big Carpet--<span class="actualprice">₹8/-</span> per Sqft</label>
+            <div id="curtainsMdiv" class="div">
+                <label for="curtainsM">Curtains(Medium)(With Iron) <span class="strikethrough">₹25</span> <span class="actualprice">₹20/-</span></label>
                 <div class="btns">
-                    <button class="plus" onclick="increment(10)">+</button> <input type="number" class="num" value="0" name="Big carpet" id="bigcarpet" min="0"> <button class="minus" onclick="decrement(10)">- </button>
+                    <button class="plus" onclick="increment(10)">+</button> <input type="number" class="num" value="0" name="Curtains(Medium)" id="curtainsM" min="0"> <button class="minus" onclick="decrement(10)">- </button>
                 </div>
                 
             </div>
+            
+            <div id="curtainsLdiv" class="div">
+                <label for="curtainsL">Curtains(Large)(With Iron) <span class="strikethrough">₹30</span> <span class="actualprice">₹25/-</span></label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(11)">+</button> <input type="number" class="num" value="0" name="Curtains(Large)" id="curtainsL" min="0"> <button class="minus" onclick="decrement(11)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="tshirtntpantdiv" class="div">
+                <label for="tshirt">T-Shirt and Trackpant <span class="strikethrough">₹39</span> <span class="actualprice">₹35/-</span></label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(12)">+</button> <input type="number" class="num" value="0" name="T-Shirt and Trackpant" id="tshirt" min="0"> <button class="minus" onclick="decrement(12)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="towelSdiv" class="div">
+                <label for="towelS">Bath mat/Towel(Small) <span class="strikethrough">₹15</span> <span class="actualprice">₹10/-</span></label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(13)">+</button> <input type="number" class="num" value="0" name="Bath mat/Towel(Small)" id="towelS" min="0"> <button class="minus" onclick="decrement(13)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="towelBdiv" class="div">
+                <label for="towelB">Bath mat/Towel(Big) <span class="strikethrough">₹20</span> <span class="actualprice">₹15/-</span></label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(14)">+</button> <input type="number" class="num" value="0" name="Bath mat/Towel(Big)" id="towelB" min="0"> <button class="minus" onclick="decrement(14)">- </button>
+                </div>
+                
+            </div>
+            
+            <div id="shoesdiv" class="div">
+                <label for="shoes">Shoes pair <span class="strikethrough">₹229</span> <span class="actualprice">₹190/-</span></label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(15)">+</button> <input type="number" class="num" value="0" name="Shoes pair" id="shoes" min="0"> <button class="minus" onclick="decrement(15)">- </button>
+                </div>
+                
+            </div>
+
+            <div id="hankydiv" class="div">
+                <label for="hanky">Hand Kerchief/Socks/InnerWear <span class="strikethrough">₹10</span> <span class="actualprice">₹8/-</span></label>
+                <div class="btns">
+                    <button class="plus" onclick="increment(16)">+</button> <input type="number" class="num" value="0" name="Hand Kerchief/Socks/InnerWear" id="hanky" min="0"> <button class="minus" onclick="decrement(16)">- </button>
+                </div>
+                
+            </div>
+            
+
             
 
             <button id="submitbtn">Add to Cart</button>
@@ -153,12 +202,12 @@
         let hamburgeropts=document.getElementsByClassName('hamburger')[0];
         let hamburgerbtn=document.getElementById('hamburgerbtn');
         let hamburgerhomebtn=document.getElementById('hamhomebtn');
+        let icons=document.getElementsByClassName('icons');
        let form=document.getElementById('form');
        let plusBtn =document.getElementsByClassName('plus');
        let minusBtn =document.getElementsByClassName('minus');
        let inputValue=document.getElementsByClassName('num')
        let addToCart=document.getElementById('submitbtn');
-       let icons=document.getElementsByClassName('icons');
        var j=0;
        form.addEventListener('submit',(e)=>{
             e.preventDefault();    
@@ -168,7 +217,7 @@
 
        addToCart.addEventListener('click',()=>{
            let count=0;
-            for(let i=0;i<11;i++){
+            for(let i=0;i<16;i++){
                 if(Number(inputValue[i].value)!=0){
                     form.submit();
                     break;        

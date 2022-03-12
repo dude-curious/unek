@@ -34,16 +34,32 @@
             <ul>
             <%  var fprice=0;
                 var tquan=0;
-                for(let i=0;i<11;i++){ 
-                if(Number(data[i][1])!=0 ){
-                    tquan=tquan+Number(data[i][1]);
-                    let tprice=data[i][2]*Number(data[i][1]);
-                    fprice=fprice+tprice; 
+
+                if(place==0){
+                    for(let i=0;i<11;i++){ 
+                    if(Number(data[i][1])!=0 ){
+                        tquan=tquan+Number(data[i][1]);
+                        let tprice=data[i][2]*Number(data[i][1]);
+                        fprice=fprice+tprice; 
+                
             %> 
             <li><span id="itemname"><%= data[i][0] %></span> <span id="quantity">Quantity : <%=data[i][1]%></span>   <span id="price">Price = ₹<%=tprice%>  </span> </li>
             <% } %>
             <% } %>  
-            
+            <% }else{
+                for(let i=0;i<19;i++){ 
+                    if(Number(data[i][1])!=0 ){
+                        tquan=tquan+Number(data[i][1]);
+                        let tprice=data[i][2]*Number(data[i][1]);
+                        fprice=fprice+tprice;
+                        
+                        %>
+            <li><span id="itemname"><%= data[i][0] %></span> <span id="quantity">Quantity : <%=data[i][1]%></span>   <span id="price">Price = ₹<%=tprice%>  </span> </li>  
+
+            <% } %>
+            <% } %>
+            <% } %>
+
         </ul>
         <p>  Total Amount Payable = ₹<%=fprice %></p>
         <input type="submit" value="Place order" id="placeorderbtn">
@@ -97,15 +113,21 @@
             if(count===3){
                 orderplaceddiv.style.display='flex';
 
-                setTimeout(()=>window.location.href="/orders",3000);
+                setTimeout(()=>window.location.href="/",3000);
                 
-                
-                res=await fetch('/order-placed',{
-                    method:'POST',
-                    headers:{'Content-type':'application/json'},
-                    body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>})
-                }).then((Response)=>console.log(Response))
-                
+                if(<%=place%>==0){
+                    res=await fetch('/order-placed-shimoga',{
+                        method:'POST',
+                        headers:{'Content-type':'application/json'},
+                        body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>})
+                    }).then((Response)=>console.log(Response))
+                }else{
+                    res=await fetch('/order-placed-bangalore',{
+                        method:'POST',
+                        headers:{'Content-type':'application/json'},
+                        body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>,place:<%=place%>})
+                    }).then((Response)=>console.log(Response))  
+                }
                 
                 
             }
