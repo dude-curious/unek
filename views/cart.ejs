@@ -46,7 +46,7 @@
             <li><span id="itemname"><%= data[i][0] %></span> <span id="quantity">Quantity : <%=data[i][1]%></span>   <span id="price">Price = ₹<%=tprice%>  </span> </li>
             <% } %>
             <% } %>  
-            <% }else{
+            <% }else if(place==2){
                 for(let i=0;i<19;i++){ 
                     if(Number(data[i][1])!=0 ){
                         tquan=tquan+Number(data[i][1]);
@@ -58,8 +58,17 @@
 
             <% } %>
             <% } %>
+            <% }else{ 
+                for(let i=0;i<17;i++){ 
+                    if(Number(data[i][1])!=0 ){
+                        tquan=tquan+Number(data[i][1]);
+                        let tprice=data[i][2]*Number(data[i][1]);
+                        fprice=fprice+tprice;
+                        %>
+            <li><span id="itemname"><%= data[i][0] %></span> <span id="quantity">Quantity : <%=data[i][1]%></span>   <span id="price">Price = ₹<%=tprice%>  </span> </li>
             <% } %>
-
+            <% } %> 
+            <% } %> 
         </ul>
         <p>  Total Amount Payable = ₹<%=fprice %></p>
         <input type="submit" value="Place order" id="placeorderbtn">
@@ -112,7 +121,7 @@
             }
             if(count===3){
                 orderplaceddiv.style.display='flex';
-
+                
                 setTimeout(()=>window.location.href="/",3000);
                 
                 if(<%=place%>==0){
@@ -121,12 +130,18 @@
                         headers:{'Content-type':'application/json'},
                         body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>})
                     }).then((Response)=>console.log(Response))
-                }else{
-                    res=await fetch('/order-placed-bangalore',{
+                }else if(<%=place%>==1){
+                    res=await fetch('/order-placed-bangalore/hostel',{
                         method:'POST',
                         headers:{'Content-type':'application/json'},
                         body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>,place:<%=place%>})
                     }).then((Response)=>console.log(Response))  
+                }else{
+                    res=await fetch('/order-placed-bangalore/home',{
+                        method:'POST',
+                        headers:{'Content-type':'application/json'},
+                        body:JSON.stringify({name:name.value,number:number.value,address:address.value,tquan:<%=tquan%>,pricep:<%=fprice%>,place:<%=place%>})
+                    }).then((Response)=>console.log(Response))
                 }
                 
                 

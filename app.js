@@ -144,12 +144,7 @@ let transporter = nodemailer.createTransport({
   });
 
 })
-app.post('/order-placed-bangalore',(req,res)=>{
-    var title;
-    if(req.body.place==1)
-        title="New order(Bangalore/hostel)";
-    else
-        title="New order(Bangalore/home)";
+app.post('/order-placed-bangalore/home',(req,res)=>{
 
     // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -164,7 +159,7 @@ let transporter = nodemailer.createTransport({
   let mailOptions = {
       from: 'unekcustomercare@gmail.com', // sender address
       to: mailingList, // list of receivers
-      subject: title, // Subject line
+      subject: "New order(Bangalore/home)", // Subject line
       text: `New Order`, // plain text body
       html:`<p>Name : ${req.body.name}</p>
       <p>Number : ${req.body.number}</p>
@@ -188,6 +183,59 @@ let transporter = nodemailer.createTransport({
       <p>${mailData[16][0]} : ${mailData[16][1]}</p>
       <p>${mailData[17][0]} : ${mailData[17][1]}</p>
       <p>${mailData[18][0]} : ${mailData[18][1]}</p>
+      
+      <h2>Total quantity : ${req.body.tquan}</h2>
+      <h1>Price payable : ${req.body.pricep}</h1>`
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+      console.log('Message sent: %s', info.messageId);
+      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+  });
+
+})
+app.post('/order-placed-bangalore/hostel',(req,res)=>{
+
+    // create reusable transporter object using the default SMTP transport
+let transporter = nodemailer.createTransport({
+    service:'gmail',
+    auth: {
+        user: 'unekcustomercare@gmail.com', // generated ethereal user
+        pass: 'Yesandno@123'  // generated ethereal password
+    }
+  });
+  var mailingList=['nabeelnov77@gmail.com','shariffsharif27@gmail.com','ziyanzaid77@gmail.com']
+  // setup email data with unicode symbols
+  let mailOptions = {
+      from: 'unekcustomercare@gmail.com', // sender address
+      to: mailingList, // list of receivers
+      subject: "New order(Bangalore/hostel)", // Subject line
+      text: `New Order`, // plain text body
+      html:`<p>Name : ${req.body.name}</p>
+      <p>Number : ${req.body.number}</p>
+      <p>Address : ${req.body.address}</p>
+      <p>Shirt and pant(pair) : ${mailData[0][1]}</p>
+      <p>Shirt : ${mailData[1][1]}</p>
+      <p>Pant : ${mailData[2][1]}</p>
+      <p>Dresses : ${mailData[3][1]}</p>
+      <p>Bed Cover (Single) : ${mailData[4][1]}</p>
+      <p>Bed Cover (Double) : ${mailData[5][1]}</p>
+      <p>Blankets(Big) : ${mailData[6][1]}</p>
+      <p>Blankets(Small) : ${mailData[7][1]}</p>
+      <p>Pillow : ${mailData[8][1]}</p>
+      <p>Curtains(Small)(With Iron) : ${mailData[9][1]}</p>
+      <p>Curtains(Medium)(With Iron) : ${mailData[10][1]}</p>
+      <p>Curtains(Large)(With Iron) : ${mailData[11][1]}</p>
+      <p>${mailData[12][0]} : ${mailData[12][1]}</p>
+      <p>${mailData[13][0]} : ${mailData[13][1]}</p>
+      <p>${mailData[14][0]} : ${mailData[14][1]}</p>
+      <p>${mailData[15][0]} : ${mailData[15][1]}</p>
+      <p>${mailData[16][0]} : ${mailData[16][1]}</p>
       
       <h2>Total quantity : ${req.body.tquan}</h2>
       <h1>Price payable : ${req.body.pricep}</h1>`
