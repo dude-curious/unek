@@ -105,7 +105,7 @@ let transporter = nodemailer.createTransport({
     service:'gmail',
     auth: {
         user: 'unekcustomercare@gmail.com', // generated ethereal user
-        pass: 'Yesandno@123'  // generated ethereal password
+        pass: 'cdjwpjsoscqkeqya'  // generated ethereal password
     }
   });
   var mailingList=['nabeelnov77@gmail.com','shariffsharif27@gmail.com','ziyanzaid77@gmail.com']
