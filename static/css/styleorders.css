@@ -16,8 +16,9 @@
     margin: 5em 0;
 } */
 body {
-    background: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%);
+    /* background: rgb(185,147,214); */
+    background: #FFCE8C;
+    /* background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%); */
 }
 
 /* ------------ nav----------- */
@@ -41,7 +42,7 @@ nav h1{
     text-indent: -10000000px;
     background: url('/img/logo.png') no-repeat ;
     /* background-size: contain; */
-    background-size: 250px 250px;
+    background-size: 100px ;
     background-position: 0 55%;
 }
 
@@ -120,7 +121,7 @@ input{
     display: block;
     margin: 0.25em;
     border: 0;
-    border-bottom: 2px solid rgb(185,147,214);
+    border-bottom: 2px solid #FFCE8C;
     outline: 0;
     text-align: center;
 }
@@ -156,8 +157,9 @@ span.actualprice{
 
 
 #submitbtn{
-    background: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    /* background: rgb(185,147,214); */
+    background: #FFCE8C;
+    /* background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%); */
     padding: .5em;
     border-radius: 4px;
     margin: .5em auto;
@@ -188,7 +190,7 @@ span.actualprice{
     border-radius:50%;
     font-weight: bold;
     color: white;
-    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    background: #FFCE8C;
     opacity:0.8;
 }
 
@@ -261,6 +263,7 @@ footer p, footer div{
     }
     nav h1{
         width: 40%;
+        background-size: 25%;
     }
     ul.normal{
         width: 60% !important;
@@ -286,8 +289,8 @@ footer p, footer div{
 
 @media  screen and (max-width:770px) {
     nav h1{
-        background-size: 150px 150px;
-        background-position: -10% 55%;
+        background-size: 100px;
+        background-position: 2% 55%;
         width: 90%;
     }
     

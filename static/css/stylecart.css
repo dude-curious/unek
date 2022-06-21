@@ -25,8 +25,10 @@ input[type=number] {
 /*to remove arrows -->*/
 
 body{
-    background: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    /* background: rgb(185,147,214); */
+    /* background: #F63854; */
+    background: #FFCE8C;
+    /* background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%); */
 }
 
 .container{
@@ -85,8 +87,10 @@ li{
 p{
     text-align: center;
     margin: 1em auto;
-    font-weight: bold;
-    background-color: blanchedalmond;
+    /* font-weight: bold; */
+    color: white;
+    /* background-color: blanchedalmond; */
+    background-color: black;
     
 }
 
@@ -114,8 +118,9 @@ li:after{
 
 
 #placeorderbtn{
-    background: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%);
+    /* background: rgb(185,147,214); */
+    background: #FFCE8C;
+    /* background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%); */
     padding: .5em;
     border-radius: 4px;
     margin: .5em auto;

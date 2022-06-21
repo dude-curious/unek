@@ -16,8 +16,10 @@
     height: 100%;
 } */
 body {
-    background: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%);
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(239, 186, 237) 17.8%, rgb(130, 231, 235) 100.2% ); */
+    background-color: #FFCE8C;
+    /* background: #fb3958; */
+    /* background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 79%); */
     position: relative;
     height: 100vh;
 }
@@ -27,15 +29,15 @@ nav{
     z-index: 1;
     position: sticky;
     top: 0;
-    background-color: white;
+    /* background-color: white; */
     margin:0 auto;
     display:flex;
     flex-wrap: wrap;
     width:100%;
-    justify-content:space-between;
+    justify-content:space-around;
     padding:1em;
     /* border-bottom:1px solid #808080; */
-    box-shadow: 0 5px 100px 1px #000000;
+    /* box-shadow: 0 5px 100px 1px #000000; */
 }
 
 nav h1{
@@ -43,15 +45,17 @@ nav h1{
     text-indent: -10000000px;
     background: url('/img/logo.png') no-repeat ;
     /* background-size: contain; */
-    background-size: 250px 250px;
+    background-size: 10% ;
     background-position: 0 55%;
 }
 
 ul.normal{
+    font-weight: bold;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 30%;
+
 }
 
 ul.normal a{
@@ -91,7 +95,8 @@ ul.hamburger a{
     padding:.75em 0;
     width: 100%;
     background-color: white;
-    
+    font-family:  sans-serif;
+
 }
 
 #ordersbtn,#hamordersbtn{
@@ -139,8 +144,9 @@ div#main{
 }
 
 div#main h3{
-    background-color: rgb(185,147,214);
-    background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%);
+    background-color: #FFCE8C;
+    
+    /* background: linear-gradient(90deg, rgba(140,166,219,1) 0%,rgba(185,147,214,1) 79%); */
     padding: 1em;
     border-radius: 10px;
     color: rgb(255, 255, 255);
@@ -195,8 +201,7 @@ footer{
     position: absolute;
     bottom: 0;
     margin: 0 auto;
-    background-color: #000000;
-    color: whitesmoke;
+    color: black;
     margin-top: 3em;
 }
 
@@ -227,6 +232,7 @@ footer p, footer div{
     }
     nav h1{
         width: 40%;
+        background-size: 25%;
     }
     ul.normal{
         width: 60% !important;
@@ -254,8 +260,8 @@ footer p, footer div{
 
 @media  screen and (max-width:770px) {
     nav h1{
-        background-size: 150px 150px;
-        background-position: -10% 55%;
+        background-size: 100px;
+        background-position: 2% 55%;
         width: 90%;
     }
     
